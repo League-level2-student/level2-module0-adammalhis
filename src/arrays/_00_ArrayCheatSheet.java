@@ -24,7 +24,7 @@ public class _00_ArrayCheatSheet {
 		int[] intarrager= new int[50];
 		//7. use a for loop to make every value of the integer array a random number
 		
-		for (int i=0; i<5; i++) {
+		for (int i=0; i<intarrager.length; i++) {
 			
 			intarrager[i]= bob.nextInt(1000000);
 			
@@ -32,9 +32,29 @@ public class _00_ArrayCheatSheet {
 			
 		}
 		//8. without printing the entire array, print only the smallest number in the array
+		int smallestNumber= Integer.MAX_VALUE;
+		int largestNumber= Integer.MIN_VALUE;
 		
+		for (int i=0; i<intarrager.length; i++) {
+			if (intarrager[i]<smallestNumber) {
+				smallestNumber= intarrager[i];
+				
+			}
+			
+		}
+		System.out.println("smallest number: " + smallestNumber); 
 		//9 print the entire array to see if step 8 was correct
-		
+		for (int i=0; i<intarrager.length; i++) {
+			if (intarrager[i]>largestNumber) {
+				largestNumber= intarrager[i];
+			}
+			
+		}
+		System.out.println("largest number: " + largestNumber);
+		for (int i=0; i<intarrager.length; i++) {
+			System.out.println(intarrager[i]);
+		}
 		//10. print the largest number in the array.
+		
 	}
 }
